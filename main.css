@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background: linear-gradient(116deg, #654dad, #3e639b);
+    min-height: 100vh;
+    width: 100%;
+    padding: 10px;
+}
+
+.container .todo-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #efefef;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+}
+
+.container .todo-container .hader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 50px;
+}
+
+.container .todo-container .hader h2 {
+    font-size: 31px;
+    font-weight: bold;
+    color: #311B92;
+}
+
+.container .todo-container .hader img {
+    width: 50px;
+    max-width: 100%;
+}
+
+.container .todo-container .add-text {
+    position: relative;
+    display: flex;
+    padding: 10px 50px 20px;
+}
+
+.container .todo-container .add-text input {
+    border: none;
+    outline: none;
+    width: 88%;
+    border-radius: 50px 0px 0px 50px;
+    padding: 18px 35px;
+    font-size: 24px;
+    color: #1a237e;
+    caret-color: #1a237e;
+}
+
+.container .todo-container .add-text button {
+    position: absolute;
+    right: 31px;
+    top: 10%;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #ff9003;
+    padding: 17px 30px;
+    border-radius: 48px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.container .todo-container .create-tasks {
+    display: block;
+    padding: 20px 50px;
+    font-size: 22px;
+    color: #1a237e;
+}
+
+.container .todo-container .create-tasks .content {
+    display: flex;
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 42px;
+    margin: 10px 0;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.container .todo-container .create-tasks .content .image {
+    position: relative;
+    display: flex;
+}
+
+.container .todo-container .create-tasks .content .image .unchecked,
+.container .todo-container .create-tasks .content .image .checked {
+    width: 25px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.container .todo-container .create-tasks .content .image .checked {
+    position: absolute;
+    opacity: 0;
+}
+
+.container .todo-container .create-tasks .content .image .checked.to-check {
+    opacity: 1;
+}
+
+
+.container .todo-container .create-tasks .content .task-name {
+    flex: 1;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.container .todo-container .create-tasks .content .task-name.done {
+    flex: 1;
+    cursor: pointer;
+    text-decoration: line-through;
+    color: #311b92a3;
+}
+
+.container .todo-container .create-tasks .content .mark {
+    color: #353535;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container .todo-container .create-tasks .content .mark:hover {
+    background-color: #e2e2e2;
+}
